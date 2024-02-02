@@ -80,7 +80,11 @@ This means that the 3rd (well, 4th since we count from 0) row of the picture has
 2) After the messages are in Kafka (which you can see via the Kafka UI), edit the `./src/pipeline/consume/mystery_picture_to_sqlite.py` file to parse the raw messages and insert 
    into the MysteryPicture table. That table has the columns `(X, Y, Value)` where X is the row number, Y is the column number, and Value is the grayscale value from 0-255.  
    This means that each raw message from Kafka should insert 500 rows in the table, and that the table should have exactly 500*500 = 250000 entries once the scrape has run.
-3) Once the `consume` file has run, on the SQLite UI, run a few sanity checks on the `MysteryPicture` table:
+
+   In `run.py`, you can comment the lines before `print("Start inserting")` to only run the `consume` part of the pipeline. In this case, you will have to reset the consumer offsets so that the
+   consumer replays the historical raw data that was already scraped with Scrapy. If you don't, it will consider that there are no new messages to process and do nothing, since it will be reading the end of the Kafka topic.
+   To reset the consumer offsets, go to the Kafka UI and click on Consumers > sqlite > `...` on the top right > Reset offset > chose the topic, reset type=EARLIEST, partitions=all.
+4) Once the `consume` file has run, on the SQLite UI, run a few sanity checks on the `MysteryPicture` table:
 ```sql
 -- The picture contains 500*500 = 250,000 pixels:
 SELECT COUNT(*)
