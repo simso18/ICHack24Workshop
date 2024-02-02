@@ -7,13 +7,9 @@
 - [Python](https://www.python.org/downloads/) installed, recommended version 3.10 or 3.11
 - Python development environment: recommended [PyCharm Community](https://www.jetbrains.com/products/compare/?product=pycharm&product=pycharm-ce)
 
-After cloning this repository, open it as a project in PyCharm. Setup the Python interpreter in PyCharm by clicking "Add Interpreter" > "Add Local Interpreter" and "Virtualenv > New". Select the Python executable which has been installed if it not already selected.
+After cloning this repository, open it as a project in PyCharm. If PyCharm prompts you to create a new virtualenv using the requirements.txt, do that.
 
-In a terminal, run:
-```
-pip install -r requirements.txt
-```
-to install the Python packages.
+If not, you might need to setup the Python interpreter in PyCharm by clicking "Add Interpreter" > "Add Local Interpreter" and "Virtualenv > New". Select the Python executable which has been installed if it not already selected. Then, in a terminal, run: `pip install -r requirements.txt` to install the Python dependencies manually.
 
 Mark the `src` directory as sources root (right click > Mark directory as > Sources root).
 
