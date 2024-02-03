@@ -1,5 +1,6 @@
 # IC Hack 2024 data engineering workshop
 
+# git clone this repo: https://github.com/simso18/ICHack24Workshop/
 
 ## Pre-requisites
 
