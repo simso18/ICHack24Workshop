@@ -3,7 +3,7 @@
 
 ## Pre-requisites
 
-- [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed. **If you're on Windows, skip to the Troubleshooting section at the bottom of this page for some common issues you might encounter**
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed. **If you're on Windows, skip to the Troubleshooting section at the bottom of this page for more detailed instructions**
 - [Python](https://www.python.org/downloads/) installed, recommended version 3.10 or 3.11
 - Python development environment: recommended [PyCharm Community](https://www.jetbrains.com/products/compare/?product=pycharm&product=pycharm-ce)
 
