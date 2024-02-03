@@ -3,7 +3,7 @@
 
 ## Pre-requisites
 
-- [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed. **If you're on Windows, skip to the Troubleshooting section at the bottom of this page for some common issues you might encounter**
 - [Python](https://www.python.org/downloads/) installed, recommended version 3.10 or 3.11
 - Python development environment: recommended [PyCharm Community](https://www.jetbrains.com/products/compare/?product=pycharm&product=pycharm-ce)
 
@@ -122,6 +122,17 @@ If you have some time left:
 3) Following the question above, can you write a SQL query to derive an additional piece of information about each team's yearly score?
 
 # Troubleshooting
+
+#### Installing Docker Desktop for Windows
+Enable Hyper-V by going to the "Turn Windows features on or off" panel and ticking Hyper-V. You will need to restart your computer after this.
+
+Download Docker for Desktop on [this page](https://www.docker.com/products/docker-desktop/). If you get the error `We've detected that you have an incompatible version of Windows. Docker Desktop requires Windows 10 Pro/Enterprise/Home version 19044 or above.` when running the installer, install an older version of Docker Desktop for Windows than the latest one. You might have more luck installing version 4.20.0 from [this page](https://docs.docker.com/desktop/release-notes/#4200).
+
+Run the installer and **untick "Use WSL instead of Hyper-V"** then proceed with the installation.
+
+#### I get `the docker daemon is not running` when running `docker compose up -d`
+
+You should have Docker Desktop up and running.
 
 #### I get `ModuleNotFoundError: No module named 'common'`
 Did you mark `src` as sources root in PyCharm?
