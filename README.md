@@ -132,7 +132,7 @@ Run the installer and **untick "Use WSL instead of Hyper-V"** then proceed with 
 
 #### I get `the docker daemon is not running` when running `docker compose up -d`
 
-You should have Docker Desktop up and running.
+Is Docker Desktop up and running?
 
 #### I get `ModuleNotFoundError: No module named 'common'`
 Did you mark `src` as sources root in PyCharm?
